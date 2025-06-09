@@ -1,4 +1,4 @@
-"""Simplified Custom FDTD Plugin using native Tidy3D formats.
+"""Custom FDTD Plugin for Tidy3D.
 
 This plugin provides a simple interface to run Tidy3D simulations using a custom FDTD solver backend.
 All operations use native Tidy3D formats for maximum compatibility.
@@ -8,7 +8,7 @@ Key Features:
 - Returns standard td.SimulationData
 - Simple parameter passing via dictionaries
 - Compatible with all Tidy3D analysis tools
-- No custom pydantic validation issues
+- Production-ready HTTP API client
 
 Example usage:
     >>> import tidy3d as td
@@ -31,7 +31,18 @@ Example usage:
 
 from __future__ import annotations
 
+from .config import CustomFDTDConfig, get_config, reset_config, set_config
 from .task import CustomFDTDTask
 from .webapi import download, monitor, run, submit
 
-__all__ = ["CustomFDTDTask", "download", "monitor", "run", "submit"]
+__all__ = [
+    "CustomFDTDConfig",
+    "CustomFDTDTask",
+    "download",
+    "get_config",
+    "monitor",
+    "reset_config",
+    "run",
+    "set_config",
+    "submit",
+]

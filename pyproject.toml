@@ -43,9 +43,11 @@ scipy = "*"
 ### NOT CORE
 boto3 = "^1.28.0"
 requests = "^2.31.0"
+python-dotenv = "^1.0.0"
 pyjwt = "*"
 click = "^8.1.0"
 responses = "*"
+httpx = "^0.25.0"
 joblib = "*"
 ### END NOT CORE
 
